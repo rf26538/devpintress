@@ -16,15 +16,15 @@
         <h1 class="text-lg font-semibold">Rehan Fazal</h1>
         <h3 class="text-md">@username</h3>
         <a href="/edit" class="px-5 py-2 bg-zinc-700 rounded-full text-xs font-semibold">Edit</a>
-        <button class="px-10 py-2 rounded-lg bg-red-700 text-xs font-semibold mt-5">Add New Post</button>
+        <a href="/add" class="px-10 py-2 rounded-lg bg-red-700 text-xs font-semibold mt-5">Add New Post</a>
     </div>
     <div class="cards flex flex-wrap gap-10 px-10 mt-10">
         <div class="card">
             <div class="w-52 h-40 bg-zinc-100 rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="https://i.pinimg.com/1200x/41/c6/6d/41c66d1226f94519c19d05efdbb92a82.jpg" alt="">
+                <img class="w-full h-full object-cover" src="/images/uploads/<%= user?.posts[0]?.image %>" alt="">
             </div>
-            <h3 class="text-xl font-semibold mt-3">All Pins</h3>
-            <h5 class="text-sm font-medium opacity-60">28 Pins</h5>
+            <a href="/show/posts" class="inline-block text-xl font-semibold mt-3">Your uploaded pins</a>
+            <h5 class="text-sm font-medium opacity-60"><%= user.posts.length%> Pins</h5>
         </div>
     </div>
 </div>
